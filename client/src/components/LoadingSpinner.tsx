@@ -48,7 +48,7 @@ export default function LoadingSpinner({ message = "Calculating optimal solution
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             <div>
-              <div className="text-white font-semibold text-sm">Greedy Algorithm</div>
+              <div className="text-white font-semibold text-sm">Dynamic Programming Algorithm</div>
               <div className="text-gray-300 text-xs">Finding the most efficient coin combination...</div>
             </div>
           </div>
