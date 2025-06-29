@@ -66,10 +66,10 @@ The built files will be in the `dist/` directory.
 docker build -t mincoin-calculator .
 
 # Run the container
-docker run -p 8080:80 mincoin-calculator
+docker run -p 3000:80 mincoin-calculator
 ```
 
-Then visit `http://localhost:8080`
+Then visit `http://localhost:3000`
 
 ## 🐳 Docker Instructions
 
@@ -92,19 +92,14 @@ Then visit `http://localhost:8080`
 
 ### Running the Container
 
-#### Basic Run
-```bash
-docker run -d -p 8080:80 --name mincoin-app mincoin-calculator:latest
-```
-
-#### With Custom Port
+#### Custom Port
 ```bash
 docker run -d -p 3000:80 --name mincoin-app mincoin-calculator:latest
 ```
 
 #### With Volume Mount (for development)
 ```bash
-docker run -d -p 8080:80 -v $(pwd)/src:/app/src --name mincoin-app mincoin-calculator:latest
+docker run -d -p 3000:80 -v $(pwd)/src:/app/src --name mincoin-app mincoin-calculator:latest
 ```
 
 ### Container Management
@@ -234,4 +229,3 @@ If you encounter any issues:
 ---
 
 **Happy calculating! 🪙✨**
-
