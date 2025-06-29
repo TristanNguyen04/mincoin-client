@@ -7,12 +7,17 @@ A beautiful, modern React frontend client for the MinCoin Calculator application
 ![Vite](https://img.shields.io/badge/Vite-7.0.0-purple?logo=vite)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38B2AC?logo=tailwind-css)
 
+## 🌐 Live Demo
+
+**Try it out now**: [MinCoin Calculator](https://coin-frontend-demo.web.app/)
+
 ## 🔗 Backend Integration
 
 This frontend client is designed to work with the **MinCoin Server** backend:
 - **Backend Repository**: [mincoin-server](https://github.com/TristanNguyen04/mincoin-server)
 - **Live API**: https://dropwizard-service-1033413749204.us-central1.run.app
 - **Backend Tech Stack**: Java 17, Dropwizard, Google Cloud Run
+- **Frontend Deployment**: Firebase Hosting
 
 ## ✨ Features
 
