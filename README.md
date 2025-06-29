@@ -65,7 +65,7 @@ mincoin-client/
 
 ## 🔗 Related Repositories
 
-- **Backend API:** [mincoin-server](https://github.com/TristanNguyen04/mincoin-server) - Java-based backend service
+- **Backend API:** [mincoin-server](https://github.com/TristanNguyen04/mincoin-server) - Java-based (Dropwizard framework) backend service
 
 ---
 
