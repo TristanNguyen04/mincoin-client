@@ -1,6 +1,8 @@
-#  MinCoin Calculator Project
+# MinCoin Calculator - Frontend Client
 
-A complete solution for calculating minimum coin combinations with a modern React frontend and robust backend API.
+A modern React frontend application for calculating minimum coin combinations. This is the client-side application that connects to the backend API.
+
+**Backend Repository:** [mincoin-server](https://github.com/TristanNguyen04/mincoin-server)
 
 ## 📦 Project Structure
 ```
@@ -59,6 +61,11 @@ mincoin-client/
 - Real-time validation
 - Docker containerization
 - Production-ready build
+- API integration with backend server
+
+## 🔗 Related Repositories
+
+- **Backend API:** [mincoin-server](https://github.com/TristanNguyen04/mincoin-server) - Java-based backend service
 
 ---
 
