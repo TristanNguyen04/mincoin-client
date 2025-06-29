@@ -27,7 +27,7 @@ A beautiful, modern web application that calculates the optimal combination of c
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/TristanNguyen04/mincoin-client
    cd mincoin-client/client
    ```
 
