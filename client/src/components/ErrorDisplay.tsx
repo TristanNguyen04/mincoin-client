@@ -3,6 +3,11 @@ interface Props{
 }
 
 export default function ErrorDisplay({ message }: Props){
+    // Check if this is the specific denomination error
+    const isDenominationError = message.includes("Cannot make exact amount with given denominations") || 
+                               message.includes("not possible to make the exact amount") ||
+                               message.includes("It's not possible to make the exact amount");
+    
     return (
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-red-400/30 shadow-2xl animate-fade-in">
             <div className="flex items-center mb-4">
@@ -12,8 +17,12 @@ export default function ErrorDisplay({ message }: Props){
                     </svg>
                 </div>
                 <div>
-                    <h2 className="text-2xl font-bold text-white">Oops! Something went wrong</h2>
-                    <p className="text-gray-300 text-sm">Please try again</p>
+                    <h2 className="text-2xl font-bold text-white">
+                        {isDenominationError ? "Cannot Make Exact Amount" : "Oops! Something went wrong"}
+                    </h2>
+                    <p className="text-gray-300 text-sm">
+                        {isDenominationError ? "The selected coins can't reach your target exactly" : "Please try again"}
+                    </p>
                 </div>
             </div>
             
@@ -23,7 +32,9 @@ export default function ErrorDisplay({ message }: Props){
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div>
-                        <div className="text-red-300 font-semibold mb-1">Error Details</div>
+                        <div className="text-red-300 font-semibold mb-1">
+                            {isDenominationError ? "What happened?" : "Error Details"}
+                        </div>
                         <div className="text-red-200 text-sm">{message}</div>
                     </div>
                 </div>
@@ -35,12 +46,25 @@ export default function ErrorDisplay({ message }: Props){
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                     <div>
-                        <div className="text-white font-semibold">Troubleshooting Tips</div>
+                        <div className="text-white font-semibold">
+                            {isDenominationError ? "How to fix this" : "Troubleshooting Tips"}
+                        </div>
                         <div className="text-gray-300 text-sm">
-                            • Check your internet connection<br/>
-                            • Verify the target amount is valid<br/>
-                            • Ensure at least one denomination is selected<br/>
-                            • Try refreshing the page if the issue persists
+                            {isDenominationError ? (
+                                <>
+                                    • Try a different target amount<br/>
+                                    • Add more coin denominations<br/>
+                                    • Use smaller denominations (pennies, nickels)<br/>
+                                    • Check if your target amount is reasonable
+                                </>
+                            ) : (
+                                <>
+                                    • Check your internet connection<br/>
+                                    • Verify the target amount is valid<br/>
+                                    • Ensure at least one denomination is selected<br/>
+                                    • Try refreshing the page if the issue persists
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>
